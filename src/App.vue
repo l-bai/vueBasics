@@ -6,8 +6,16 @@ const tooltipText = ref("this is my tooltip")
 </script>
 
 <template>
-  <h1>Contador con clase dinámica</h1>
-<input type="text" v-model="tooltipText"/> <br>
+  <h1>Ejercicios</h1>
+  
+  <div>
+    <h2>Contador con clase dinámica</h2>
+    <Contador/>
+  </div>
+
+  <div>
+    <h2>Ejemplo plugin tooltip</h2>
+    <input type="text" v-model="tooltipText"/> <br>
   <span>Hover me <ToolTip :text="tooltipText" :options="{placement: 'bottom'}" /></span>
 
   <br/>
@@ -15,7 +23,9 @@ const tooltipText = ref("this is my tooltip")
 
   <br/>
   <button @click="$hideAllTooltips()">hide all</button>
-<Contador/>
+  </div>
+
+
 </template>
 
 
